@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #imgDiv {
+        text-align: center;
+    }
+
+    #matchName {
+        text-align: center;
+    }
+
+    #aboutMe {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Survey Questions</h1>
+                 
+                <hr class="my-4">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="name">Name (Required)</label>
+                        <input type="text" class="form-control" id="name" placeholder="Optimus Prime">
+                    </div>
+                    <div class="form-group">
+                        <label for="picture">Picture Link (Required)</label>
+                        <input type="url" class='form-control' id="picture">
+                    </div>
+                    <div class="form-group">
+                        <label for="aboutme">What would you like us to know about you? (Optional)</label>
+                        <input type="textarea" class="form-control" id="aboutme">
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Are you shy or outgoing?</label>
+                        <select class="form-control" id="question1">
+                            <option value='1'>1 (Very Shy)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Life of the party)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2">Do you prefer hanging out with one person or a group?</label>
+                        <select class="form-control" id="question2">
+                            <option value='1'>1 (One person)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3 (A few people)</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Party time)</option>
+                        </select>
+                    </div> 
+                    <div class="form-group">
+                        <label for="question3">Are you an animal person?</label>
+                        <select class="form-control" id="question3">
+                            <option value='1'>1 (Not at all)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (I want my house to be a zoo)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">Indoor or outdoor activities?</label>
+                        <select class="form-control" id="question4">
+                            <option value='1'>1 (Stay in)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Get out)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">Are you a workaholic?</label>
+                        <select class="form-control" id="question5">
+                            <option value='1'>1 (Strongly disagree)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">Do you enjoy debating controversial topics?</label>
+                        <select class="form-control" id="question6">
+                            <option value='1'>1 (Can't we just get along?)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Bring it)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">Do you enjoy going to concerts?</label>
+                        <select class="form-control" id="question7">
+                            <option value='1'>1 (I'm too old for that)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Can we get the VIP tickets?)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">Do you need money to be happy?</label>
+                        <select class="form-control" id="question8">
+                            <option value='1'>1 (Strongly disagree)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">Are you punctual?</label>
+                        <select class="form-control" id="question9">
+                            <option value='1'>1 (Strongly disagree)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (Strongly agree)</option>
+                        </select>
+                    </div> 
+                    <div class="form-group">
+                        <label for="question10">How do you feel about change?</label>
+                        <select class="form-control" id="question10">
+                            <option value='1'>1 (I like my routine)</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5 (I like to keep things new and interesting)</option>
+                        </select>
+                    </div> 
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-md" id="submit">Submit</button>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/api/friends">API Friends List</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <h2 id="matchName"></h2>
+                <div class="modal-body" id="imgDiv">
+                    <img src="" alt="Friend picture" id="matchPicture">
+                </div>
+                <p id='aboutMe'></p>
+                <div class="modal-footer">
+                    <a role="button" href='/survey' class="btn btn-primary">Retake the quiz!</a>
+                    <a role="button" href='/' class="btn btn-secondary">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+    
+    // On click function to grab the user submitted info
+
+    $('#submit').on('click', function(event){
+        event.preventDefault();
+        var newFriend = {
+            name: $('#name').val().trim(),
+            photo: $('#picture').val().trim(),
+            scores: [
+                $('#question1').val().trim(),
+                $('#question2').val().trim(),
+                $('#question3').val().trim(),
+                $('#question4').val().trim(),
+                $('#question5').val().trim(),
+                $('#question6').val().trim(),
+                $('#question7').val().trim(),
+                $('#question8').val().trim(),
+                $('#question9').val().trim(),
+                $('#question10').val().trim(),
+            ],
+            aboutme: $('#aboutme').val()
+        };
+        console.log(newFriend);
+
+        $.post(window.location.origin + '/api/friends', newFriend).done(function(data){
+            console.log('New friend has been added to the api');
+            console.log(data.matchbio)
+            $('#matchName').text(data.matchname);
+            $('#matchPicture').attr('src', data.matchpicture);
+            $('#aboutMe').text(data.matchbio)
+
+            $('#myModal').modal('show')
+        });
+
+        
+    });
+    
+    </script>
+
+</body>
+</html>
